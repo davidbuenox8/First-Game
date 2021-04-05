@@ -26,11 +26,14 @@ class Player {
         this.velocity = -10;
     }
     superJump() {
-        if (this.direction === 'E') {
-            this.x += 200;
-        } else {
-            this.x -= 200;
+        if (this.y !== 450 - this.height) {
+            if (this.direction === 'E') {
+                this.x += 200;
+            } else {
+                this.x -= 200;
+            }
         }
+
 
     }
     updateScore() {
@@ -41,21 +44,21 @@ class Player {
         const lives = document.getElementById('lives');
         lives.innerHTML = this.lives;
     }
-    collusion(bombInfo) {
-        const playerX = this.x + this.width / 2;
-        const playerY = this.y + this.height / 2;
-        const bombX = bombInfo.x + game.bomb.width / 2;
-        const bombY = bombInfo.y + game.bomb.height / 2;
+    //collusion(bombInfo) {
+    //const playerX = this.x + this.width / 2;
+    //const playerY = this.y + this.height / 2;
+    //const bombX = bombInfo.x + game.bomb.width / 2;
+    //const bombY = bombInfo.y + game.bomb.height / 2;
 
 
-        if (dist(playerX, playerY, bombX, bombY) < 50) {
-            this.lives += -1;
-            this.updateLives();
-            this.y = 450 - this.height;
-            this.x = 5;
+    //if (dist(playerX, playerY, bombX, bombY) < 50) {
+    //this.lives += -1;
+    //this.updateLives();
+    //this.y = 450 - this.height;
+    //this.x = 5;
 
-        }
-    }
+    // }
+    //}
 
 
     draw() {
@@ -74,17 +77,17 @@ class Player {
         if (this.y <= -80) {
             this.y = -80;
         };
-        if (keyIsDown(39) && game.player.y !== 450 - game.player.height) {
+        if (keyIsDown(39) && this.y !== 450 - this.height) {
             this.moveRight();
             this.direction = 'E';
             game.playerImage = game.playerImageR;
         };
-        if (keyIsDown(37) && game.player.y !== 450 - game.player.height) {
+        if (keyIsDown(37) && this.y !== 450 - this.height) {
             game.player.moveLeft();
             game.player.direction = 'W';
             game.playerImage = game.playerImageL;
         };
-        this.collusion(game.bomb);
+
         image(game.playerImage, this.x, this.y, this.width, this.height);
     }
 }

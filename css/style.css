@@ -1,7 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
 body{
     background: linear-gradient(45deg, #b1b1b1,#000000);
- 
+    font-family: 'Press Start 2P', cursive;
+height:1100px;
+   
 
+}
+h1{
+    font-size: 50px;
+    color: blueviolet;
+    text-shadow:5px 5px black;
 }
 
 .console{
@@ -19,11 +30,13 @@ body{
 
 h2,span{
     color:aliceblue;
+    text-shadow:5px 5px black;
 }
 
-.h1container{
+#h1container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+

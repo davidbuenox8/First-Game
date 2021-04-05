@@ -3,7 +3,6 @@ const game = new Game();
 
 function preload() {
     game.preload();
-
 }
 
 function setup() {
@@ -11,14 +10,11 @@ function setup() {
     canvas.parent('gameWindow');
     game.setup();
     game.friend.setup();
-    game.bomb.setup();
-
+    // game.bomb.setup();
 }
 
 function draw() {
-
     game.draw();
-
 }
 function keyPressed() {
     // if (keyCode === 39 && game.player.y !== 450 - game.player.height) {
@@ -32,13 +28,11 @@ function keyPressed() {
     if (keyCode === 38) {
         game.player.jump();
         game.playerImage = game.playerJump;
-
     };
     if (keyCode === 32) {
         game.player.superJump();
         game.playerImage = game.playerJump;
     }
-
 }
 
 

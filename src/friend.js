@@ -21,7 +21,9 @@ class Friend {
 
         if (dist(friendX, friendY, playerX, playerY) < 50) {
             this.setRandomPosition();
-            game.player.score += 10;
+            game.addBomb();
+            game.player.score += 1000;
+            game.friends.push('Friend');
             game.player.updateScore();
         }
     }
