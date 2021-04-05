@@ -1,0 +1,29 @@
+body{
+    background: linear-gradient(45deg, #b1b1b1,#000000);
+ 
+
+}
+
+.console{
+   height:794px;
+   width:1444px;
+  position: center;
+    background-image: url(../images/nintendo.png);
+    background-position: center;
+    background-size: cover;
+    display:flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+}
+
+h2,span{
+    color:aliceblue;
+}
+
+.h1container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
