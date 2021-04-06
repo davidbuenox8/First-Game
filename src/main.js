@@ -17,9 +17,29 @@ function draw() {
     game.draw();
 }
 
-function restart() {
+
+function endGame() {
+    game.player.score = 0;
+    game.player.x = 5;
+    game.playerdirection = 'E';
+    game.player.y = 450 - this.height;
+    game.playerscore = 0;
+    game.playerlives = 3;
+    game.bombs = [];
+    game.friends = [];
+    game.hearts = [];
+    game.lemons = [];
+    const score = document.getElementById('score');
+    score.innerHTML = 0;
+    const rescueCount = document.getElementById('friend');
+    rescueCount.innerHTML = '';
+    const lives = document.getElementById('lives');
+    lives.innerHTML = `<img class='heart' src="images/heart.png" alt="heart"><img class='heart'
+    src="images/heart.png" alt="heart"><img class='heart' src="images/heart.png" alt="heart">`
+
 
 }
+
 
 
 function keyPressed() {
@@ -31,6 +51,9 @@ function keyPressed() {
     if (keyCode === 32) {
         game.player.teleport();
         game.playerImage = game.playerJump;
+    }
+    if (keyCode === 40) {
+        game.player.direction = 'S'
     }
 }
 

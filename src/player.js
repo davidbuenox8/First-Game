@@ -34,8 +34,10 @@ class Player {
                 this.x += 200;
             } else if (this.direction === 'W') {
                 this.x -= 200;
-            } else {
+            } else if (this.direction === 'N') {
                 this.y -= 200;
+            } else {
+                this.y += 200;
             }
         }
 
@@ -45,13 +47,17 @@ class Player {
         const score = document.getElementById('score');
         score.innerHTML = this.score;
     }
-    updateLives() {
+    takeLives() {
         const lives = document.getElementById('lives');
-        lives.innerHTML = this.lives;
+        //lives.innerHTML = this.lives;
+        lives.removeChild(lives.lastElementChild);
     }
-
-
-
+    addLives() {
+        const lives = document.getElementById('lives');
+        let newHeart = document.createElement('img');
+        newHeart.src = 'images/heart.png';
+        lives.appendChild(newHeart);
+    }
     draw() {
         this.velocity += this.gravity;
         this.y += this.velocity;

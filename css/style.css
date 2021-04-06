@@ -28,6 +28,17 @@ h1{
     align-items: center;
 }
 
+#friend img{
+  
+    width:45px;
+    margin-right: 10px;
+}
+#lives img{
+    
+    width:40px;
+    margin-right: 10px;
+}
+
 h2,span{
     color:aliceblue;
     text-shadow:5px 5px black;

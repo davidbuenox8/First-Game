@@ -23,7 +23,7 @@ class Game {
         this.playerImageR = loadImage('../images/playerRight.png');
         this.playerImageL = loadImage('../images/playerLeft.png');
         this.playerJump = loadImage('../images/playerjump.png');
-        this.friendImage = loadImage('../images/friend.gif');
+        this.friendImage = loadImage('../images/rescue1.png');
         //  this.friendImage1 = loadImage('../images/rescue1.png');
         //  this.friendImage2 = loadImage('../images/rescue2.png');
         this.bombImage = loadImage('../images/bomb1.gif');
@@ -67,12 +67,14 @@ class Game {
 
     }
     endGame() {
-        if (this.player.lives === 0) {
+        if (this.player.lives === 0 && game.player.y === 450 - game.player.height) {
             alert(`You Died! Your final score is: ${this.player.score}`);
             setup();
-        } else if (this.friends.length === 10) {
+            endGame();
+        } else if (this.friends.length === 10 && game.player.y === 450 - game.player.height) {
             alert(`Nice! You have rescued all your friends. Your final score is: ${this.player.score}`);
             setup();
+            endGame();
         }
     }
 }

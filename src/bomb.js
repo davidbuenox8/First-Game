@@ -19,7 +19,7 @@ class Bomb {
             game.player.lives += -1;
             game.player.score += -500;
             game.player.updateScore();
-            game.player.updateLives();
+            game.player.takeLives();
             game.player.y = 450 - game.player.height;
             game.player.x = 5;
 
