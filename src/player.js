@@ -24,13 +24,16 @@ class Player {
     }
     jump() {
         this.velocity = -10;
+        this.direction = 'N';
     }
-    superJump() {
+    teleport() {
         if (this.y !== 450 - this.height) {
             if (this.direction === 'E') {
                 this.x += 200;
-            } else {
+            } else if (this.direction === 'W') {
                 this.x -= 200;
+            } else {
+                this.y -= 200;
             }
         }
 

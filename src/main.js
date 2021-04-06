@@ -16,6 +16,8 @@ function setup() {
 function draw() {
     game.draw();
 }
+
+
 function keyPressed() {
     // if (keyCode === 39 && game.player.y !== 450 - game.player.height) {
     //   game.player.moveRight();
@@ -30,7 +32,7 @@ function keyPressed() {
         game.playerImage = game.playerJump;
     };
     if (keyCode === 32) {
-        game.player.superJump();
+        game.player.teleport();
         game.playerImage = game.playerJump;
     }
 }

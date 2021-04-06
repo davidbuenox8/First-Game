@@ -12,6 +12,8 @@ class Game {
         // this.bomb = new Bomb(this.bombImage)
         this.bombs = [];
         this.friends = [];
+        this.hearts = [];
+        this.lemons = [];
     }
 
     preload() {
@@ -21,13 +23,23 @@ class Game {
         this.playerImageL = loadImage('../images/playerLeft.png');
         this.playerJump = loadImage('../images/playerjump.png');
         this.friendImage = loadImage('../images/rescue1.png');
-        this.bombImage = loadImage('../images/bomb1.gif')
+        this.bombImage = loadImage('../images/bomb1.gif');
+        this.heartImage = loadImage('../images/heart.png')
+        this.lemonImage = loadImage('../images/lemon.png');
     }
     addBomb() {
         //const newBomb = new Bomb();
         this.bombs.push(new Bomb());
 
-        console.log(this.bombs)
+
+    }
+
+    addHeart() {
+        this.hearts.push(new Heart());
+
+    }
+    addLemon() {
+        this.lemons.push(new Lemon());
     }
 
     draw() {
@@ -37,21 +49,23 @@ class Game {
         this.friend.draw();
         for (let bomb of this.bombs) {
             bomb.draw();
+        };
+        for (let heart of this.hearts) {
+            heart.draw();
         }
-        // this.bomb.draw();
+        for (let lemon of this.lemons) {
+            lemon.draw();
+        }
+
         this.endGame();
-        //this.bombs.forEach();
+
     }
     endGame() {
         if (this.player.lives === 0) {
             alert(`You Died! Your final score is: ${this.player.score}`);
             setup();
         } else if (this.friends.length === 10) {
-            alert(`Nice! You have rescue all your friends. Your final score is: ${this.player.score}`);
-            setup();
-
-        } else if (this.player.score === 10000 && this.friends.length === 10) {
-            alert(`Congratulations! You have saved all your friends and reach the maximum score`);
+            alert(`Nice! You have rescued all your friends. Your final score is: ${this.player.score}`);
             setup();
         }
     }
