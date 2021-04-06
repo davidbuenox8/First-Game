@@ -17,31 +17,37 @@ class Game {
     }
 
     preload() {
+        //images
         this.backgroundImage = loadImage('../images/background1.png');
         this.playerImageS = loadImage('../images/player.png')
         this.playerImageR = loadImage('../images/playerRight.png');
         this.playerImageL = loadImage('../images/playerLeft.png');
         this.playerJump = loadImage('../images/playerjump.png');
-        this.friendImage = loadImage('../images/rescue1.png');
+        this.friendImage = loadImage('../images/friend.gif');
+        //  this.friendImage1 = loadImage('../images/rescue1.png');
+        //  this.friendImage2 = loadImage('../images/rescue2.png');
         this.bombImage = loadImage('../images/bomb1.gif');
         this.heartImage = loadImage('../images/heart.png')
         this.lemonImage = loadImage('../images/lemon.png');
+        //sound
+        this.jumpSound = loadSound('../sounds/jump02.mp3');
+        this.teleportSound = loadSound('../sounds/shoot00.mp3');
+        this.pickLemonSound = loadSound('../sounds/pickLemon.mp3');
+        this.pickFriendSound = loadSound('../sounds/pickFriend1.mp3');
+        this.pickHeartSound = loadSound('../sounds/pickHeart.mp3');
+        this.hitBombSound = loadSound('../sounds/hitBomb.mp3');
     }
+
     addBomb() {
-        //const newBomb = new Bomb();
         this.bombs.push(new Bomb());
-
-
     }
 
     addHeart() {
         this.hearts.push(new Heart());
-
     }
     addLemon() {
         this.lemons.push(new Lemon());
     }
-
     draw() {
         clear();
         image(this.backgroundImage, 0, 0, 1000, 500);

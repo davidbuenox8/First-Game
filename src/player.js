@@ -25,8 +25,10 @@ class Player {
     jump() {
         this.velocity = -10;
         this.direction = 'N';
+        game.jumpSound.play();
     }
     teleport() {
+        game.teleportSound.play();
         if (this.y !== 450 - this.height) {
             if (this.direction === 'E') {
                 this.x += 200;
@@ -47,21 +49,7 @@ class Player {
         const lives = document.getElementById('lives');
         lives.innerHTML = this.lives;
     }
-    //collusion(bombInfo) {
-    //const playerX = this.x + this.width / 2;
-    //const playerY = this.y + this.height / 2;
-    //const bombX = bombInfo.x + game.bomb.width / 2;
-    //const bombY = bombInfo.y + game.bomb.height / 2;
 
-
-    //if (dist(playerX, playerY, bombX, bombY) < 50) {
-    //this.lives += -1;
-    //this.updateLives();
-    //this.y = 450 - this.height;
-    //this.x = 5;
-
-    // }
-    //}
 
 
     draw() {
