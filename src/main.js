@@ -8,6 +8,7 @@ function preload() {
 }
 
 function setup() {
+
     let canvas = createCanvas(900, 500);
     canvas.parent('gameWindow');
     game.setup();
