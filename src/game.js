@@ -21,7 +21,7 @@ class Game {
         this.backgroundImage = loadImage('images/background1.png');
         this.playerImageS = loadImage('images/player.png')
         this.playerImageR = loadImage('images/playerRight.png');
-        this.playerImageL = loadImage('images/playerLeft.png');
+        this.playerImageL = loadImage('../images/playerLeft.png');
         this.playerJump = loadImage('./images/playerjump.png');
         this.friendImage = loadImage('./images/rescue2.png');
         //  this.friendImage1 = loadImage('../images/rescue1.png');
