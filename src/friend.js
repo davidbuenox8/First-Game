@@ -29,14 +29,16 @@ class Friend {
         if (dist(friendX, friendY, playerX, playerY) < 50) {
             game.pickFriendSound.play();
             this.updateRescue();
-            this.setRandomPosition();
+            if (game.friends.length < 10) {
+                this.setRandomPosition();
+            }
             game.addBomb();
             if (game.friends.length === 5) {
                 game.addHeart();
             };
             if (game.friends.length >= 1 && game.lemons.length === 0) {
                 game.addLemon();
-            }
+            };
             game.player.score += 1000;
             game.friends.push('Friend');
             game.player.updateScore();

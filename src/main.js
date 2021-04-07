@@ -1,6 +1,8 @@
 const game = new Game();
 
 
+
+
 function preload() {
     game.preload();
 }
@@ -10,7 +12,7 @@ function setup() {
     canvas.parent('gameWindow');
     game.setup();
     game.friend.setup();
-    // game.bomb.setup();
+
 }
 
 function draw() {
@@ -40,13 +42,22 @@ function endGame() {
 
 }
 
+function restart() {
+    console.log('restart')
+}
 
+const restartButton = document.getElementById('restart');
+restartButton.addEventListener('click', function () {
+    setup();
+    endGame();
+});
 
 function keyPressed() {
 
     if (keyCode === 38) {
         game.player.jump();
         game.playerImage = game.playerJump;
+
     };
     if (keyCode === 32) {
         game.player.teleport();
@@ -56,6 +67,8 @@ function keyPressed() {
         game.player.direction = 'S'
     }
 }
+
+
 
 
 
