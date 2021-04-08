@@ -1,19 +1,15 @@
 const game = new Game();
 
 
-
-
 function preload() {
     game.preload();
 }
 
 function setup() {
-
     let canvas = createCanvas(900, 500);
     canvas.parent('gameWindow');
     game.setup();
     game.friend.setup();
-
 }
 
 function draw() {
@@ -53,17 +49,27 @@ restartButton.addEventListener('click', function () {
     endGame();
 });
 
-function keyPressed() {
+const instructionsBtn = document.getElementById('instructions');
+const popUp = document.getElementById('popUp');
+let popUpClass = popUp.classList;
+instructionsBtn.addEventListener('click', function () {
+    popUpClass.toggle('modal');
+});
+const closeBtn = document.getElementById('closeBtn1');
+closeBtn.addEventListener('click', function () {
+    popUpClass.toggle('modal');
+});
 
+
+function keyPressed() {
     if (keyCode === 38) {
         game.player.jump();
         game.playerImage = game.playerJump;
-
     };
     if (keyCode === 32) {
         game.player.teleport();
         game.playerImage = game.playerJump;
-    }
+    };
     if (keyCode === 40) {
         game.player.direction = 'S'
     }

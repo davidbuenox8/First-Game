@@ -5,7 +5,7 @@
 body{
     background: linear-gradient(45deg, #b1b1b1,#000000);
     font-family: 'Press Start 2P', cursive;
-height:1100px;
+
    
 
 }
@@ -13,6 +13,7 @@ h1{
     font-size: 50px;
     color: blueviolet;
     text-shadow:5px 5px black;
+    margin:30px;
 }
 
 .console{
@@ -42,6 +43,28 @@ h1{
 h2,span{
     color:aliceblue;
     text-shadow:5px 5px black;
+    margin-left: 20px;
+}
+
+p span img{
+    width:60px;
+    margin-right: 10px;
+
+}
+p{
+    font-size: 20px;
+    margin-left: 30px;
+ 
+}
+
+ul{
+    list-style: none;
+}
+
+.HowToPlay img{
+width: 100px;
+margin-right:30px;
+margin-bottom:30px;
 }
 
 #h1container{
@@ -120,5 +143,41 @@ h2,span{
           radial-gradient(circle at 100% 0, rgba(204,0,0,0) 14px, #000000 15px),
           radial-gradient(circle at 100% 100%, rgba(204,0,0,0) 14px, #000000 15px),
           radial-gradient(circle at 0 100%, rgba(204,0,0,0) 14px, #000000 15px);
+  }
+.pixel{
+margin-bottom: 50px;
+}
+
+.closeBtn{
+      font-size: 25px;
+      text-shadow: none;
+      color:black;
+  }
+.closeBtn:hover, .closeBtn:focus{
+color:red;
+text-decoration: none;
+cursor: pointer;
+
+  }
+
+  .modal{
+      display:none;
+      position:fixed;
+      z-index:1;
+      left:0;
+      top:0;
+      width: 100%;
+      height:90%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+  }
+
+  .modalContent{
+      background-color: rgb(255, 255, 255);
+      margin: 10% auto;
+      margin-bottom:30%;
+      padding:20px;
+      width: 70%;
+      box-shadow: 5px 5px black;
   }
 
