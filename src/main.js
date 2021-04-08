@@ -1,6 +1,5 @@
 const game = new Game();
 
-
 function preload() {
     game.preload();
 }
@@ -35,8 +34,6 @@ function endGame() {
     const lives = document.getElementById('lives');
     lives.innerHTML = `<img class='heart' src="images/heart.png" alt="heart"><img class='heart'
     src="images/heart.png" alt="heart"><img class='heart' src="images/heart.png" alt="heart">`
-
-
 }
 
 function restart() {
@@ -59,7 +56,6 @@ const closeBtn = document.getElementById('closeBtn1');
 closeBtn.addEventListener('click', function () {
     popUpClass.toggle('modal');
 });
-
 
 function keyPressed() {
     if (keyCode === 38) {

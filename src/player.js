@@ -13,9 +13,6 @@ class Player {
         this.lives = 3;
     }
 
-
-
-
     moveRight() {
         this.x += 2;
     }
@@ -40,8 +37,6 @@ class Player {
                 this.y += 200;
             }
         }
-
-
     }
     updateScore() {
         const score = document.getElementById('score');
@@ -84,7 +79,6 @@ class Player {
             game.player.direction = 'W';
             game.playerImage = game.playerImageL;
         };
-
         image(game.playerImage, this.x, this.y, this.width, this.height);
     }
 }

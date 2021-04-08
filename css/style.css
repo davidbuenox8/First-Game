@@ -5,10 +5,8 @@
 body{
     background: linear-gradient(45deg, #b1b1b1,#000000);
     font-family: 'Press Start 2P', cursive;
-
-   
-
 }
+
 h1{
     font-size: 50px;
     color: blueviolet;
@@ -54,7 +52,6 @@ p span img{
 p{
     font-size: 20px;
     margin-left: 30px;
- 
 }
 
 ul{
@@ -81,15 +78,11 @@ margin-bottom:30px;
     height: auto;
     margin: 10px;
     font-family: 'Press Start 2P', cursive;
-  
-    
     position: relative;
     display: inline-block;
     vertical-align: top;
-    text-transform: uppercase;
-    
+    text-transform: uppercase; 
     cursor: pointer;
-    
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -104,14 +97,12 @@ margin-bottom:30px;
   
   .pixel {
     line-height: 0;
-    
     image-rendering: optimizeSpeed;
-    image-rendering: -moz-crisp-edges; /* Firefox */
-    image-rendering: -o-crisp-edges; /* Opera */
-    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
-    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
-    
+    -ms-interpolation-mode: nearest-neighbor;
     border-style: solid;
     border-width: 20px;
     -moz-border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
@@ -129,7 +120,6 @@ margin-bottom:30px;
     margin: -20px -20px;
     line-height: 20px;
     padding: 10px 20px;
-    
       background: #050505;
       background:
           linear-gradient(135deg, transparent 10px, #000000 0) top left,
@@ -144,6 +134,7 @@ margin-bottom:30px;
           radial-gradient(circle at 100% 100%, rgba(204,0,0,0) 14px, #000000 15px),
           radial-gradient(circle at 0 100%, rgba(204,0,0,0) 14px, #000000 15px);
   }
+
 .pixel{
 margin-bottom: 50px;
 }
@@ -153,11 +144,11 @@ margin-bottom: 50px;
       text-shadow: none;
       color:black;
   }
+
 .closeBtn:hover, .closeBtn:focus{
 color:red;
 text-decoration: none;
 cursor: pointer;
-
   }
 
   .modal{

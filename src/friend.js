@@ -17,7 +17,6 @@ class Friend {
         let newImage = document.createElement('img');
         newImage.src = 'images/friend.gif';
         rescueCount.appendChild(newImage);
-
     }
     catchFriend(playerInfo) {
         const friendX = this.x + this.width / 2;
@@ -25,13 +24,12 @@ class Friend {
         const playerX = playerInfo.x + game.player.width / 2;
         const playerY = playerInfo.y + game.player.height / 2;
 
-
         if (dist(friendX, friendY, playerX, playerY) < 50) {
             game.pickFriendSound.play();
             this.updateRescue();
             if (game.friends.length < 10) {
                 this.setRandomPosition();
-            }
+            };
             game.addBomb();
             if (game.friends.length === 5) {
                 game.addHeart();
@@ -64,7 +62,6 @@ class Heart {
         const playerX = playerInfo.x + game.player.width / 2;
         const playerY = playerInfo.y + game.player.height / 2;
 
-
         if (dist(heartX, heartY, playerX, playerY) < 50) {
             game.pickHeartSound.play();
             game.hearts.pop()
@@ -80,7 +77,6 @@ class Heart {
         this.catchHeart(game.player);
         image(game.heartImage, this.x, this.y, this.width, this.height)
     }
-
 }
 
 class Lemon {
@@ -96,13 +92,11 @@ class Lemon {
         const playerX = playerInfo.x + game.player.width / 2;
         const playerY = playerInfo.y + game.player.height / 2;
 
-
         if (dist(lemonX, lemonY, playerX, playerY) < 25) {
             game.pickLemonSound.play();
             game.lemons.pop()
             game.player.score += 5000;
             game.player.updateScore();
-
         }
     }
     draw() {
