@@ -50,11 +50,11 @@ const instructionsBtn = document.getElementById('instructions');
 const popUp = document.getElementById('popUp');
 let popUpClass = popUp.classList;
 instructionsBtn.addEventListener('click', function () {
-    popUpClass.toggle('modal');
+    popUp.style.display = 'block';
 });
 const closeBtn = document.getElementById('closeBtn1');
 closeBtn.addEventListener('click', function () {
-    popUpClass.toggle('modal');
+    popUp.style.display = 'none';
 });
 
 function keyPressed() {
