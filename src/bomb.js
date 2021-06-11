@@ -12,7 +12,9 @@ class Bomb {
         const playerX = playerInfo.x + game.player.width / 2;
         const playerY = playerInfo.y + game.player.height / 2;
         if (dist(playerX, playerY, bombX, bombY) < 50) {
-            game.hitBombSound.play();
+            if (game.sound === 'true') {
+                game.hitBombSound.play();
+            }
             game.player.lives += -1;
             game.player.score += -500;
             game.player.updateScore();

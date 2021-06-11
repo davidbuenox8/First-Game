@@ -22,10 +22,14 @@ class Player {
     jump() {
         this.velocity = -10;
         this.direction = 'N';
-        game.jumpSound.play();
+        if (game.sound === 'true') {
+            game.jumpSound.play();
+        }
     }
     teleport() {
-        game.teleportSound.play();
+        if (game.sound === 'true') {
+            game.teleportSound.play();
+        }
         if (this.y !== 450 - this.height) {
             if (this.direction === 'E') {
                 this.x += 200;
@@ -44,7 +48,6 @@ class Player {
     }
     takeLives() {
         const lives = document.getElementById('lives');
-        //lives.innerHTML = this.lives;
         lives.removeChild(lives.lastElementChild);
     }
     addLives() {

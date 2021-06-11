@@ -14,6 +14,7 @@ class Game {
         this.friends = [];
         this.hearts = [];
         this.lemons = [];
+        this.sound = 'false'
     }
 
     preload() {
@@ -70,12 +71,16 @@ class Game {
     }
     endGame() {
         if (this.player.lives === 0) {
-            this.looseGameSound.play();
+            if (this.sound === 'true') {
+                this.looseGameSound.play();
+            }
             alert(`You Died! Your final score is: ${this.player.score}`);
             setup();
             endGame();
-        } else if (this.friends.length === 10) {
-            this.winGameSound.play();
+        } else if (this.friends.length === 12) {
+            if (this.sound === 'true') {
+                this.winGameSound.play();
+            }
             alert(`Congratulations! You have rescued all your friends. Your final score is: ${this.player.score}`);
             setup();
             endGame();

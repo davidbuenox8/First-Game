@@ -57,6 +57,17 @@ closeBtn.addEventListener('click', function () {
     popUp.style.display = 'none';
 });
 
+const soundBtn = document.getElementById('sound');
+soundBtn.addEventListener('click', function () {
+    if (game.sound === 'false') {
+        soundBtn.innerText = 'SOUND:OFF';
+        game.sound = 'true'
+    } else {
+        soundBtn.innerText = 'SOUND: ON';
+        game.sound = 'false'
+    }
+});
+
 function keyPressed() {
     if (keyCode === 38) {
         game.player.jump();

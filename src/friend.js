@@ -25,7 +25,9 @@ class Friend {
         const playerY = playerInfo.y + game.player.height / 2;
 
         if (dist(friendX, friendY, playerX, playerY) < 50) {
-            game.pickFriendSound.play();
+            if (game.sound === 'true') {
+                game.pickFriendSound.play();
+            }
             this.updateRescue();
             if (game.friends.length < 10) {
                 this.setRandomPosition();
@@ -63,7 +65,9 @@ class Heart {
         const playerY = playerInfo.y + game.player.height / 2;
 
         if (dist(heartX, heartY, playerX, playerY) < 50) {
-            game.pickHeartSound.play();
+            if (game.sound === 'true') {
+                game.pickHeartSound.play();
+            }
             game.hearts.pop()
             game.player.score += 3000;
             game.player.updateScore();
@@ -93,7 +97,9 @@ class Lemon {
         const playerY = playerInfo.y + game.player.height / 2;
 
         if (dist(lemonX, lemonY, playerX, playerY) < 25) {
-            game.pickLemonSound.play();
+            if (game.sound === 'true') {
+                game.pickLemonSound.play();
+            }
             game.lemons.pop()
             game.player.score += 5000;
             game.player.updateScore();

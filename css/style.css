@@ -6,11 +6,14 @@
 body{
     background-color: #434343;
     font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 html, body {margin: 0; height: 100%; overflow: hidden}
 
 h1{
-    font-size: 40px;
+    font-size: 50px;
     color: #9449c6;
     text-shadow:3px 3px black;
     margin-top:30px;
@@ -39,10 +42,21 @@ h3{
     align-items: center;
 }
 
+.scoresContainer{
+    margin-left: 20px;
+}
+
+.friendContainer{
+    margin-left: 15px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 #friend img{
-  
+  margin:5px;
     width:45px;
-    margin-right: 10px;
+   
 }
 #lives img{
     
