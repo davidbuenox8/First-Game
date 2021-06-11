@@ -36,9 +36,6 @@ function endGame() {
     src="images/heart.png" alt="heart"><img class='heart' src="images/heart.png" alt="heart">`
 }
 
-function restart() {
-    console.log('restart')
-}
 
 const restartButton = document.getElementById('restart');
 restartButton.addEventListener('click', function () {

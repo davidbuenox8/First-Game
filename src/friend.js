@@ -47,7 +47,7 @@ class Friend {
     draw() {
         this.catchFriend(game.player);
         image(game.friendImage, this.x, this.y, this.width, this.height)
-        //game.friendImage.position(this.x, this.y)
+
     }
 }
 

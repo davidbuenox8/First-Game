@@ -9,7 +9,6 @@ class Game {
     setup() {
         this.player = new Player();
         this.friend = new Friend();
-        // this.bomb = new Bomb(this.bombImage)
         this.bombs = [];
         this.friends = [];
         this.hearts = [];
@@ -25,8 +24,6 @@ class Game {
         this.playerImageL = loadImage('images/playerLeft.png');
         this.playerJump = loadImage('images/playerjump.png');
         this.friendImage = loadImage('images/rescue2.png');
-        //  this.friendImage1 = loadImage('../images/rescue1.png');
-        //  this.friendImage2 = loadImage('../images/rescue2.png');
         this.bombImage = loadImage('images/bomb1.gif');
         this.heartImage = loadImage('images/heart.png')
         this.lemonImage = loadImage('images/lemon.png');
