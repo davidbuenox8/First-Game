@@ -5,6 +5,7 @@ class Game {
         this.ghostImage;
         this.friendImage;
         this.bombImage;
+        this.sound = 'false'
     }
     setup() {
         this.player = new Player();
@@ -13,7 +14,6 @@ class Game {
         this.friends = [];
         this.hearts = [];
         this.lemons = [];
-        this.sound = 'false'
     }
 
     preload() {

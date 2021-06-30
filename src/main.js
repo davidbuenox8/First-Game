@@ -57,10 +57,10 @@ closeBtn.addEventListener('click', function () {
 const soundBtn = document.getElementById('sound');
 soundBtn.addEventListener('click', function () {
     if (game.sound === 'false') {
-        soundBtn.innerText = 'SOUND:OFF';
+        soundBtn.innerText = 'SOUND:ON';
         game.sound = 'true'
     } else {
-        soundBtn.innerText = 'SOUND: ON';
+        soundBtn.innerText = 'SOUND:OFF';
         game.sound = 'false'
     }
 });
